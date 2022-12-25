@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+		
+		<title>圣诞节快乐</title>
+	
+	<style>
+	
+		html, body {
+		  height: 100%;
+		  padding: 0;
+		  margin: 0;
+		  background: #000;
+		}
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+		label{
+			
+			display: block;
+			margin: 0 auto;
+			color: pink;
+			font-size: 20px;
+			padding-right: 5px;//往左偏移10px
+			animation:mymove 2.5s infinite;/* //关联动画名称、动画时长、循环 */
+				/*Safari 和 Chrome:*/
+				-webkit-animation:mymove 2.5s infinite;/* //同上（兼容） */
+		}
+		@keyframes mymove
+			{
+			50% {font-size: 40px;}/* //名字放大大小 */
+		}
+		
+		/*Safari 和 Chrome:*/
+		@-webkit-keyframes mymove
+		{
+			50% {font-size: 40px;}/* //名字放大大小 */
+		}
+		.middle{
+			width: 100%;
+			height: 0%;
+			display: flex;align-items: center;
+		}
+		.middle2{
+			position: absolute;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			
+			display: flex;align-items: center;
+		}
+	</style>
+<link rel="stylesheet" href="css/style.css">
+
+
+    <div class="container">
+        <span>圣</span>
+        <span>诞</span>
+        <span>节</span>
+        <span>快</span>
+        <span>乐</span>
+        
+ 
+    </div>
+	
+	
+		<div class="middle">
+			<div class="middle2">
+		
+
+        <br>
+			
+				
+			</div>
+			
+			<img src="https://pic.imgdb.cn/item/638ee8fbb1fccdcd360398db.gif" width="1000" height="650">
+		</div>
+		
+  <audio id="bgmusic" src="https://sf6-cdn-tos.douyinstatic.com/obj/ies-music/6905357668872063752.mp3" autoplay preload loop></audio>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript"></script>
+ <script>
+    window.onload = function(){
+      function autoPlayAudio() {
+            wx.config({
+                // 配置信息, 即使不正确也能使用 wx.ready
+                debug: false
+                , appId: ''
+                , timestamp: 1
+                , nonceStr: ''
+                , signature: ''
+                , jsApiList: []
+            });
+            wx.ready(function () {
+              document.getElementById("bgmusic").play();
+            });
+        }
+    autoPlayAudio();
+  }
+  </script>
+    
+	
+</body></html>
